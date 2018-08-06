@@ -1,0 +1,110 @@
+.section_squad {
+    background: url(img/squad/bg_squad.jpg) center center / cover no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    // &:before {
+    //     display: block;
+    //     content: "";
+    //     height: 100%;
+    //     width: 50%;
+    // }
+}
+.squad {
+    position: absolute;
+    height: 100%;
+    padding: rem(115px) rem(100px);
+    width: 39%;
+    background-color: #2f3234;
+    opacity: 0.93;
+}
+.squad_titel {
+    font-family: 'Gagalin-Regular';
+	font-size: rem(72px);
+	font-weight: normal;
+    font-style: normal;
+    color:#f9b43b;
+    margin-bottom: rem(55px);
+}
+.squad_item_titel {
+    font-family: 'Gagalin-Regular';
+	font-size: rem(14px);
+	font-weight: normal;
+    font-style: normal;
+    color: white;
+    margin-bottom: rem(40px);
+    white-space: nowrap;
+    margin-left: rem(10px);
+}
+.squad_item:before {
+    content: "";
+    display: block;
+    border: rem(5px) solid transparent;
+    border-top: rem(5px) solid #f9b43b;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    top:rem(5px);
+    
+}
+.squad_list {
+    padding: 0;
+    margin: 0;
+}
+.squad_item {
+    display: flex;
+    width: rem(330px);
+    flex-wrap: wrap;
+}
+
+.squad_img {
+    width: rem(100px);
+    height: rem(100px);
+    border-radius: 50%;
+}
+.squad_item_text_block {
+    margin-left: rem(20px);
+    
+}
+.squad_item_text {
+    display: none;
+    margin-bottom: rem(40px);
+    margin-top: rem(20px);
+}
+/*--------------------------------------*/
+.squad_item_titel_active-two {
+    color:#f9b43b;
+    margin:0;
+    margin-left: rem(10px);
+}
+.squad_item_text_active-two {
+    display: initial;
+    display: flex;
+}
+.squad_item_active:before{
+    transform: rotate(180deg);
+    position: relative;
+    top:0px;
+}
+// .squad_item before {
+//     border: 10px solid transparent;	border-bottom: 10px solid #f9b43b;
+// }
+/*--------------------------------------*/
+.squad_item_block_caption {
+    font-family: 'Ubuntu';
+	font-size: rem(14px);
+	font-weight: bold;
+    font-style: normal;
+    color: #fff;
+    margin-bottom: rem(19px);
+}
+.squad_item_block_text {
+    font-family: 'Ubuntu';
+	font-size: rem(14px);
+	font-weight: 300;
+    font-style: normal;
+    color: #fff;
+    line-height: rem(23px);
+}

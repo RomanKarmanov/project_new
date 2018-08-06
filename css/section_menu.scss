@@ -1,0 +1,85 @@
+.section_menu {
+    background: url(img/menu/bg_menu.jpg) center center / cover no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.menu_caption {
+    font-family: 'Gagalin-Regular';
+	font-size: rem(72px);
+	font-weight: normal;
+    font-style: normal;
+    color: white;
+    padding: rem(115px) rem(95px);
+}
+.accordeon_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;    
+    width: 70%;
+}
+.accordeon_menu_list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    height: 100vh;
+}
+.accordeon_menu_item {
+    display: flex;
+    
+    
+}
+.menu_btn {
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: rem(80px);
+    position: relative;
+    
+    
+}
+.menu_btn_text {
+    width: 100%;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    position: absolute;
+    top: 90%;
+    font-family: 'Gagalin-Regular';
+	font-size: rem(40px);
+	font-weight: normal;
+    font-style: normal;
+    color: white;
+    
+}
+.menu-active {
+    color:#eeae3d;
+}
+.menu_content {
+    overflow: hidden;
+    width: 0;
+    font-family: 'Ubuntu';
+	font-size: rem(14px);
+	font-weight: 300;
+    font-style: normal;
+    color: white;
+    background-color: #2f3234;
+    opacity: 0.93;
+    &_text {
+        padding: rem(65px) rem(35px);
+    }
+}
+.menu_content_active-one {
+    width: 100%;
+}
+
+/*-----------------------------------*/
+// .bg_div {
+//     display: block;
+//     height: 100%;
+//     width: 100%;
+//     background-color: #4c4e50;
+//     opacity: 0.93;
+// }
