@@ -10,7 +10,10 @@
     width: 25%;
     height: 50vh;
     filter: grayscale(100%);
-    
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
 }
 .reviews__hover {
    height: 100%;
@@ -25,6 +28,9 @@
         opacity: 1;
         transition: 0.4s;
     }
+    @include tablets {
+        text-align: center;
+    }
 }
 .name__people {
     font-family: 'Gagalin-Regular';
@@ -32,6 +38,10 @@
     font-style: normal;
     font-size: rem(14px);
     color:#fff;
+    @include phones {
+        font-size: rem(24px);
+        margin-bottom: rem(30px);
+    }
 }
 .text__people {
     font-family: 'Ubuntu';
@@ -40,6 +50,9 @@
     font-size: rem(14px);
     color:#ffffff;
     margin: rem(30px) rem(0px);
+    @include phones {
+        display: none;
+    }
     
 }
 .btn {

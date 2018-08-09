@@ -1,3 +1,7 @@
+$tablets: 768px;
+$phones: 480px;
+//breakpoints
+//----------------
 @import "css/normalize.scss";
 /********************************/
 @import "css/media.scss";
@@ -12,6 +16,7 @@
 @import "css/section_map.scss";
 @import "css/footer.scss";
 @import "css/edge_block.scss";
+@import "css/burger_slider.scss";
 /*------------------------------------------------*/
 @import "css/fonts.scss";
 /*=-----------------------------------------------------------*/

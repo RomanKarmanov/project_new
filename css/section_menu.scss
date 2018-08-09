@@ -11,6 +11,9 @@
     font-style: normal;
     color: white;
     padding: rem(115px) rem(95px);
+    @include phones {
+        font-size: rem(50px); 
+    }
 }
 .accordeon_menu {
     position: absolute;
@@ -27,12 +30,10 @@
     height: 100vh;
 }
 .accordeon_menu_item {
-    display: flex;
-    
-    
+    display: flex;   
 }
 .menu_btn {
-    display: block;
+    display: flex;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -52,11 +53,14 @@
 	font-weight: normal;
     font-style: normal;
     color: white;
+    @include phones {
+        font-size: rem(40px); 
+    }
     
 }
-.menu-active {
-    color:#eeae3d;
-}
+// .menu-active {
+//     color:#eeae3d;
+// }
 .menu_content {
     overflow: hidden;
     width: 0;
@@ -71,9 +75,10 @@
         padding: rem(65px) rem(35px);
     }
 }
-.menu_content_active-one {
-    width: 100%;
-}
+// .menu_content_active-one {
+//     width: 0%;
+// }
+
 
 /*-----------------------------------*/
 // .bg_div {

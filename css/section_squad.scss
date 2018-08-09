@@ -19,6 +19,9 @@
     width: 39%;
     background-color: #2f3234;
     opacity: 0.93;
+    @include phones {
+    width: 65%;
+    }
 }
 .squad_titel {
     font-family: 'Gagalin-Regular';
@@ -27,8 +30,14 @@
     font-style: normal;
     color:#f9b43b;
     margin-bottom: rem(55px);
+    @include phones {
+        margin-bottom: rem(40px);
+        font-size: rem(50px);
+        text-align: center;
+    }
 }
 .squad_item_titel {
+    display: flex;
     font-family: 'Gagalin-Regular';
 	font-size: rem(14px);
 	font-weight: normal;
@@ -36,22 +45,47 @@
     color: white;
     margin-bottom: rem(40px);
     white-space: nowrap;
-    margin-left: rem(10px);
+    // margin-left: rem(10px);
+    &:before {
+        content: "";
+        display: block;
+        border: rem(5px) solid transparent;
+        border-top: rem(5px) solid #f9b43b;
+        width: 0px;
+        height: 0px;
+        position: relative;
+        top:rem(5px);
+        margin-right: 10px;
+    }
+    @include tablets {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+
+    }
+    @include phones {
+        font-size: rem(24px);
+    }
 }
-.squad_item:before {
-    content: "";
-    display: block;
-    border: rem(5px) solid transparent;
-    border-top: rem(5px) solid #f9b43b;
-    width: 0px;
-    height: 0px;
-    position: relative;
-    top:rem(5px);
+// .squad_item:before {
+//     content: "";
+//     display: block;
+//     border: rem(5px) solid transparent;
+//     border-top: rem(5px) solid #f9b43b;
+//     width: 0px;
+//     height: 0px;
+//     position: relative;
+//     top:rem(5px);
     
-}
+// }
 .squad_list {
     padding: 0;
     margin: 0;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
 }
 .squad_item {
     display: flex;
@@ -66,6 +100,9 @@
 }
 .squad_item_text_block {
     margin-left: rem(20px);
+    @include tablets {
+        margin: 0;
+    }
     
 }
 .squad_item_text {
@@ -75,19 +112,28 @@
 }
 /*--------------------------------------*/
 .squad_item_titel_active-two {
+    &:before{
+        transform: rotate(180deg);
+        position: relative;
+        top:0px;
+    }
     color:#f9b43b;
     margin:0;
-    margin-left: rem(10px);
+    // margin-left: rem(10px);
 }
 .squad_item_text_active-two {
     display: initial;
     display: flex;
+    @include tablets {
+        display: initial;
+        text-align: center;
+    }
 }
-.squad_item_active:before{
-    transform: rotate(180deg);
-    position: relative;
-    top:0px;
-}
+// .squad_item_active:before{
+//     transform: rotate(180deg);
+//     position: relative;
+//     top:0px;
+// }
 // .squad_item before {
 //     border: 10px solid transparent;	border-bottom: 10px solid #f9b43b;
 // }

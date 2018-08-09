@@ -1,0 +1,123 @@
+.burger_slider {
+    background-image:linear-gradient( rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+    width: 95%;
+    height: 100vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    position: relative;
+}
+.svg_left {
+    position: absolute;
+    transform: rotate(90deg);
+    left:0;
+    margin-left: rem(45px);
+}
+.svg_right {
+    position: absolute;
+    transform: rotate(-90deg);
+    right: 0;
+    margin-right: rem(45px);
+}
+.burger_slider_block {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+.burger_slider_list {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: rem(930px);
+    height: rem(480px);
+    display: flex;
+    align-items: flex-end;
+}
+.burger_slider_item {
+    display: flex;
+    
+}
+.burger_svg_link {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #f08c33;
+    width: rem(90px);
+    height: rem(90px);
+    border-radius: rem(7px);
+    justify-content: center;
+    align-items: center;
+}
+.block_composition {
+    color:#fff;
+    font-family: 'Gagalin-Regular';
+	font-size: rem(14px);
+	font-weight: normal;
+    font-style: normal;
+    width: rem(50px);
+    height: rem(70px);
+}
+.burger_svg {
+    width: rem(45px);
+    height: rem(45px);
+    fill:#fff;
+    left: 0;
+    bottom: 0;
+}
+.block_kkal {
+    display: flex;
+    position: absolute;
+    width: rem(90px);
+    height: rem(90px);
+    justify-content: center;
+    align-items: center;
+}
+.burger_kkal {
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: rem(60px);
+    height: rem(60px);
+    fill:#fff;
+}
+.dark_burger_titel {
+    font-family: 'Gagalin-Regular';
+	font-size: rem(72px);
+	font-weight: normal;
+    font-style: normal;
+    color:white;
+}
+.dark_burger_text {
+    font-family: 'Ubuntu';
+	font-size: rem(14px);
+	font-weight: 300;
+    font-style: normal;
+    color:white;
+    width: 100%;
+    // line-height: rem(20px);
+    margin-top: rem(30px);
+    margin-bottom: rem(20px);
+}
+.price_and_order_block {
+    display: flex;
+}
+.dark_price {
+    font-family: 'Gagalin-Regular';
+	font-size: rem(14px);
+	font-weight: normal;
+    font-style: normal;
+    color:#e35028;
+}
+.dark_price span{
+    font-size: rem(72px);
+}
+.btn_dark_burger {
+    display: flex;
+    align-items: flex-end;
+    margin-left: rem(30px);
+}
+    
