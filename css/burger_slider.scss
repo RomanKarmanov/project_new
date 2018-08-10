@@ -83,6 +83,28 @@
     width: rem(60px);
     height: rem(60px);
     fill:#fff;
+    opacity: 0.5;
+}
+.sign {
+    position: relative;
+}
+.sign_content {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-5%);
+    font-family: 'Gagalin-Regular';
+	font-size: rem(14px);
+	font-weight: normal;
+    font-style: normal;
+    color:white;
+    opacity: 0.5;
+}
+.sign_number {
+    font-size: rem(20px);
+}
+.sign_kkal {
+    margin: rem(10px) 0;
 }
 .dark_burger_titel {
     font-family: 'Gagalin-Regular';
@@ -97,7 +119,7 @@
 	font-weight: 300;
     font-style: normal;
     color:white;
-    width: 100%;
+    width: rem(445px);
     // line-height: rem(20px);
     margin-top: rem(30px);
     margin-bottom: rem(20px);
