@@ -342,7 +342,8 @@ body {
 .section {
   background: url(img/front_one.jpg) center center/cover no-repeat;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  position: relative; }
 
 .start__block {
   width: 100%;
@@ -405,6 +406,7 @@ body {
   width: 1.7857142857rem;
   height: 1.7857142857rem;
   margin-left: 0.7142857143rem;
+  cursor: pointer;
   display: none; }
   @media screen and (max-width: 768px) {
     .btn_nav_mobile {
@@ -1081,6 +1083,13 @@ body {
   height: 100vh;
   position: relative; }
 
+.map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
 .footer {
   background: url(img/bg_dark.jpg) center center/cover no-repeat;
   width: 100%;
@@ -1212,26 +1221,24 @@ body {
 
 .burger_slider {
   background-image: linear-gradient(#f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
-  width: 95%;
+  min-width: 34.2857142857rem;
   height: 100vh;
   display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
-  padding: 2%;
-  position: relative; }
+  padding: 2%; }
 
 .svg_left {
-  position: absolute;
+  display: block;
   transform: rotate(90deg);
   left: 0;
-  margin-left: 3.2142857143rem; }
+  margin-left: 0rem; }
 
 .svg_right {
-  position: absolute;
+  display: block;
   transform: rotate(-90deg);
   right: 0;
-  margin-right: 3.2142857143rem; }
+  margin-right: 0rem; }
 
 .burger_slider_block {
   display: flex;
@@ -1242,13 +1249,19 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  width: 66.4285714286rem;
+  max-width: 67.1428571429rem;
   height: 34.2857142857rem;
   display: flex;
-  align-items: flex-end; }
-
-.burger_slider_item {
-  display: flex; }
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .burger_slider_list {
+      height: 100%; } }
+  .burger_slider_list .burger_slider_item {
+    display: flex; }
+    @media screen and (max-width: 768px) {
+      .burger_slider_list .burger_slider_item {
+        flex-direction: column;
+        text-align: center; } }
 
 .burger_svg_link {
   display: flex;
@@ -1261,6 +1274,11 @@ body {
   border-radius: 0.5rem;
   justify-content: center;
   align-items: center; }
+  .burger_svg_link:hover .composition_emersion {
+    display: initial; }
+  @media screen and (max-width: 768px) {
+    .burger_svg_link {
+      margin-top: 3.5714285714rem; } }
 
 .block_composition {
   color: #fff;
@@ -1271,20 +1289,85 @@ body {
   width: 3.5714285714rem;
   height: 5rem; }
 
+/*----------------------------------------*/
+.composition_emersion {
+  position: absolute;
+  width: 19.2857142857rem;
+  height: 23.5714285714rem;
+  background-color: #fff;
+  opacity: 0.9;
+  border-radius: 0.5rem;
+  left: 100%;
+  top: 0;
+  display: none; }
+
+.composition_list {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.composition_item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.svg_composition {
+  width: 3.2142857143rem;
+  height: 2.8571428571rem; }
+
+.beef {
+  fill: red; }
+
+.buns {
+  fill: #f8b43a; }
+
+.salad {
+  fill: #91c449; }
+
+.sauce {
+  fill: #e25028; }
+
+.cucumber {
+  fill: #8ac03e; }
+
+.cheese {
+  fill: #f8b43a; }
+
+.composition_item_text, .composition_item_weight {
+  font-family: 'Ubuntu';
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal; }
+
+/*----------------------------------------*/
 .burger_svg {
   width: 3.2142857143rem;
   height: 3.2142857143rem;
-  fill: #fff;
-  left: 0;
-  bottom: 0; }
+  fill: #fff; }
 
 .block_kkal {
   display: flex;
   position: absolute;
+  left: 0;
+  bottom: 0;
   width: 6.4285714286rem;
   height: 6.4285714286rem;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 3.5714285714rem; }
+  @media screen and (max-width: 768px) {
+    .block_kkal {
+      left: initial;
+      bottom: initial;
+      margin-bottom: 0;
+      right: 0;
+      top: 0;
+      margin-right: 1.4285714286rem;
+      margin-top: 3.5714285714rem; } }
 
 .burger_kkal {
   display: flex;
@@ -1316,6 +1399,15 @@ body {
 .sign_kkal {
   margin: 0.7142857143rem 0; }
 
+.dark_burger_picture {
+  flex: 1; }
+
+.dark_burger_img {
+  width: 100%; }
+
+.dark_burger_block_content {
+  flex: 1; }
+
 .dark_burger_titel {
   font-family: 'Gagalin-Regular';
   font-size: 5.1428571429rem;
@@ -1329,12 +1421,18 @@ body {
   font-weight: 300;
   font-style: normal;
   color: white;
-  width: 31.7857142857rem;
+  width: 100%;
   margin-top: 2.1428571429rem;
   margin-bottom: 1.4285714286rem; }
+  @media screen and (max-width: 480px) {
+    .dark_burger_text {
+      line-height: 1.7857142857rem; } }
 
 .price_and_order_block {
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .price_and_order_block {
+      justify-content: center; } }
 
 .dark_price {
   font-family: 'Gagalin-Regular';
@@ -1350,6 +1448,62 @@ body {
   display: flex;
   align-items: flex-end;
   margin-left: 2.1428571429rem; }
+
+.dropdown {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #2f3234;
+  opacity: 0.99;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  display: none; }
+
+.dropdown_logo__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0.7142857143rem 1.7857142857rem; }
+
+.close_block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2.5rem 1.4285714286rem; }
+
+.dropdown_menu {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0; }
+
+.dropdown_menu__point {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column; }
+  .dropdown_menu__point:after {
+    content: "";
+    display: block;
+    width: 0.2857142857rem;
+    height: 0.2857142857rem;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 2.1428571429rem 0; }
+
+.dropdown_menu__point:last-child:after {
+  display: none; }
+
+.dropdown_menu__text {
+  color: white;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.7142857143rem; }
 
 /*------------------------------------------------*/
 @font-face {

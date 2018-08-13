@@ -1,25 +1,27 @@
 .burger_slider {
     background-image:linear-gradient( rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-    width: 95%;
+    min-width: rem(480px);
     height: 100vh;
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: center;
     padding: 2%;
-    position: relative;
+
+    // position: relative;
 }
 .svg_left {
-    position: absolute;
+    // position: absolute;
+    display: block;
     transform: rotate(90deg);
     left:0;
-    margin-left: rem(45px);
+    margin-left: rem(0px);
 }
 .svg_right {
-    position: absolute;
+    // position: absolute;
+    display: block;
     transform: rotate(-90deg);
     right: 0;
-    margin-right: rem(45px);
+    margin-right: rem(0px);
 }
 .burger_slider_block {
     display: flex;
@@ -31,14 +33,23 @@
     margin: 0;
     padding: 0;
     position: relative;
-    width: rem(930px);
+    // width: rem(930px);
+    max-width: rem(940px);
     height: rem(480px);
     display: flex;
-    align-items: flex-end;
-}
+    align-items: center;
+    @include tablets {
+        height: 100%;
+    }
+    
 .burger_slider_item {
     display: flex;
-    
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+   
 }
 .burger_svg_link {
     display: flex;
@@ -51,6 +62,14 @@
     border-radius: rem(7px);
     justify-content: center;
     align-items: center;
+    &:hover {
+        .composition_emersion {
+            display: initial;
+        }
+    }
+    @include tablets {
+       margin-top: rem(50px); 
+    }
 }
 .block_composition {
     color:#fff;
@@ -61,20 +80,88 @@
     width: rem(50px);
     height: rem(70px);
 }
+/*----------------------------------------*/
+.composition_emersion {
+    position: absolute;
+    width: rem(270px);
+    height: rem(330px);
+    background-color: #fff;
+    opacity: 0.9;
+    border-radius: rem(7px);
+    left: 100%;
+    top: 0;
+    display: none;
+    
+}
+.composition_list {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.composition_item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.svg_composition {
+    width: rem(45px);
+    height: rem(40px);
+}
+.beef {
+    fill: red;
+}
+.buns {
+    fill:#f8b43a;
+}
+.salad {
+    fill:#91c449;
+}
+.sauce {
+    fill:#e25028;
+}
+.cucumber {
+    fill:#8ac03e;
+}
+.cheese{
+    fill:#f8b43a;
+}
+.composition_item_text, .composition_item_weight {
+    font-family: 'Ubuntu';
+    font-size: rem(14px);
+	font-weight: 500;
+	font-style: normal;
+}
+
+/*----------------------------------------*/
 .burger_svg {
     width: rem(45px);
     height: rem(45px);
     fill:#fff;
-    left: 0;
-    bottom: 0;
 }
 .block_kkal {
     display: flex;
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: rem(90px);
     height: rem(90px);
     justify-content: center;
     align-items: center;
+    margin-bottom: rem(50px);
+    @include tablets {
+        left: initial;
+        bottom: initial;
+        margin-bottom: 0;
+        right: 0;
+        top:0;
+        margin-right: rem(20px);
+        margin-top: rem(50px);
+    }
 }
 .burger_kkal {
     display: flex;
@@ -106,6 +193,23 @@
 .sign_kkal {
     margin: rem(10px) 0;
 }
+.dark_burger_picture {
+    flex:1;
+//     width: 100%;
+//     background-image: url(img/burger_slider/dark_burger.png);
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: 100% auto;
+//     // z-index: 10;
+//     display: block;
+}
+.dark_burger_img {
+    width:100%;
+    
+}
+.dark_burger_block_content {
+    flex: 1;
+}
 .dark_burger_titel {
     font-family: 'Gagalin-Regular';
 	font-size: rem(72px);
@@ -119,13 +223,19 @@
 	font-weight: 300;
     font-style: normal;
     color:white;
-    width: rem(445px);
-    // line-height: rem(20px);
+    width: 100%;
+    
     margin-top: rem(30px);
     margin-bottom: rem(20px);
+    @include phones {
+    line-height: rem(25px);
+    }
 }
 .price_and_order_block {
     display: flex;
+    @include tablets {
+        justify-content: center;
+    }
 }
 .dark_price {
     font-family: 'Gagalin-Regular';
