@@ -1,49 +1,59 @@
 .burger_slider {
     background-image:linear-gradient( rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
-    min-width: rem(480px);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 2%;
-
-    // position: relative;
 }
 .svg_left {
-    // position: absolute;
+    position: absolute;
     display: block;
     transform: rotate(90deg);
-    left:0;
-    margin-left: rem(0px);
+    left:rem(0px);
+    margin-left: rem(50px);
+    cursor: pointer;
+    z-index: 9000;
 }
 .svg_right {
-    // position: absolute;
+    position: absolute;
     display: block;
     transform: rotate(-90deg);
-    right: 0;
-    margin-right: rem(0px);
+    right: rem(0px);
+    margin-right: rem(50px);
+    cursor: pointer;
+    z-index: 9000;
 }
 .burger_slider_block {
     display: flex;
-    height: 100%;
+    height: 80%; //было 100
     align-items: center;
-    
+    overflow: hidden;
+    min-width: rem(480px);
 }
 .burger_slider_list {
     margin: 0;
     padding: 0;
     position: relative;
-    // width: rem(930px);
+    min-width: rem(480px);
     max-width: rem(940px);
+   
     height: rem(480px);
     display: flex;
     align-items: center;
+    transition:0.6s; 
     @include tablets {
         height: 100%;
+        width: rem(480px);
     }
     
 .burger_slider_item {
     display: flex;
+    position: relative;
+    height: 100%;
+    align-items: center;
+    width: 100%;
+    flex:1 0 auto;
     @include tablets {
         flex-direction: column;
         text-align: center;
@@ -202,7 +212,9 @@
 //     background-size: 100% auto;
 //     // z-index: 10;
 //     display: block;
-}
+display: flex;
+align-items: flex-end;
+} 
 .dark_burger_img {
     width:100%;
     

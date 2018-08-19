@@ -41,3 +41,40 @@ for (let i = 0; i < attempt.length; i++) {
         this.closest('.squad_item').classList.add("squad_item_text_active-two");
     });
 };
+/*-------------------------------------------------------------------*/
+
+const left = document.querySelector("#clickLeft");
+const right = document.querySelector("#clickRight");
+const items = document.querySelector("#items");
+// const styleItems = getComputedStyle(items);
+
+const minRight = 0;
+const maxRight = 1880;
+const step = 940;
+let parseRight = 0;
+
+items.style.right = parseRight;
+
+right.addEventListener("click", function(r) {
+ if (parseRight<maxRight) {
+  parseRight +=step;
+  items.style.right = parseRight + "px";
+ }
+ else if (parseRight==maxRight) {
+    parseRight = 0 ;
+    items.style.right = parseRight + "px";
+ }
+});
+
+left.addEventListener("click", function(l) {
+  if (parseRight >minRight){
+    parseRight -=step;
+    items.style.right = parseRight + "px";
+  }
+  else if (parseRight==minRight) {
+    parseRight = 1880 ;
+    items.style.right = maxRight + "px";
+ }
+});
+
+/*---------------------------------------------------------------------*/
