@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 const menuBtn = document.querySelector("#btn_nav_mobile");
 const closeBtn = document.querySelector("#close_link");
 const dropdown = document.querySelector("#dropdown");
@@ -20,9 +22,11 @@ for (let i = 0; i < teamName.length; i++) {
         for (let j = 0; j < teamName.length; j++) {
             if (j !== i) {
                 teamName[j].closest('.accordeon_menu_item').classList.remove("active_menu_elem");
-
+    
             };
+            
         };
+        
         this.closest('.accordeon_menu_item').classList.add("active_menu_elem");
         
     });
@@ -49,8 +53,8 @@ const items = document.querySelector("#items");
 // const styleItems = getComputedStyle(items);
 
 const minRight = 0;
-const maxRight = 1880;
-const step = 940;
+const maxRight = 200;
+const step = 100;
 let parseRight = 0;
 
 items.style.right = parseRight;
@@ -58,23 +62,27 @@ items.style.right = parseRight;
 right.addEventListener("click", function(r) {
  if (parseRight<maxRight) {
   parseRight +=step;
-  items.style.right = parseRight + "px";
+  items.style.right = parseRight + "%";
  }
  else if (parseRight==maxRight) {
     parseRight = 0 ;
-    items.style.right = parseRight + "px";
+    items.style.right = parseRight + "%";
  }
 });
 
 left.addEventListener("click", function(l) {
   if (parseRight >minRight){
     parseRight -=step;
-    items.style.right = parseRight + "px";
+    items.style.right = parseRight + "%";
   }
   else if (parseRight==minRight) {
-    parseRight = 1880 ;
-    items.style.right = maxRight + "px";
+    parseRight = 200;
+    items.style.right = maxRight + "%";
  }
 });
 
 /*---------------------------------------------------------------------*/
+
+
+	$('#fullpage').fullpage()
+});
